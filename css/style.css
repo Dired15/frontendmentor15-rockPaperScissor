@@ -1,0 +1,343 @@
+
+html
+{
+    height:100%;
+}
+
+body
+{
+    display:flex;
+    justify-content:center;
+    background-repeat:no-repeat;
+    background-image:radial-gradient(circle at 50% 0%,hsl(214, 47%, 23%),hsl(237, 49%, 15%) 80%) ;
+    
+    
+   
+}
+
+body *
+{
+    user-select:none;
+    box-sizing:border-box;
+    margin:0px;
+    font-size:15px;
+    font-style:normal;
+    font-weight:normal;
+    padding:0px;
+}
+
+#main
+{
+    width:95vw;
+    height:95vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+    
+}
+
+#header
+{
+    width:40%;
+    height:17%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:1.0%;
+    border:solid hsl(217, 16%, 45%);
+    border-radius:15px;
+
+    margin-top:2%;
+}
+
+#header h1
+{
+    margin:0px;
+    width:20%;
+   
+    font-size:1.5em;
+    font-weight:bolder;
+    
+    
+
+}
+
+#scoreCard
+{
+    box-sizing: border-box;
+   
+    width:20%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    background-color:white;
+    border-radius:15px;
+
+    
+
+}
+
+#scoreCard h2
+{
+    font-weight:bold;
+    margin-top:12%;
+    font-size:0.8em;
+    color:hsl(229, 64%, 46%);
+
+}
+
+#score
+{
+    margin-bottom:15%;
+    font-size:3.0em;
+    font-weight:bold;
+    color:hsl(229, 25%, 31%);
+}
+
+
+#chooseAction
+{
+    width:30vw;
+    height:30vw;
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    background-image:url("../assets/images/bg-triangle.svg");
+    background-repeat:no-repeat;
+    background-size:50% 50%;
+    background-position:center;
+
+    margin-bottom:2%;
+    
+}
+
+#topBand
+{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:50%;
+    width:100%;
+}
+
+#bottomBand
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:50%;
+    width:100%;
+}
+
+.actionIcon
+{
+    width:35%;
+    padding-top:35%;
+     border-radius:50%;
+    background-color:rgba(0,0,0,0.2);
+}
+
+.scissors
+{
+    background-image:url("../assets/images/icon-scissors.svg"),radial-gradient(circle at center ,white 0%,white 45%,hsl(39, 89%, 49%) 50%,hsl(40, 84%, 53%) 80%);
+    background-repeat:no-repeat,no-repeat;
+    background-position:center,center;
+    background-size:4.0em,cover;
+    
+    
+}
+
+.rock
+{
+   
+    background-image:url("../assets/images/icon-rock.svg"),radial-gradient(circle at center ,white 0%,white 45%,hsl(349, 71%, 52%) 50%,hsl(349, 70%, 56%) 80%);
+    background-repeat:no-repeat,no-repeat;
+    background-position:center,center;
+    background-size:4.0em,contain;
+  
+    
+}
+
+.paper
+{
+    background-image:url("../assets/images/icon-paper.svg"),radial-gradient(circle at center ,white 0%,white 45%,hsl(230, 89%, 62%) 50%,hsl(230, 89%, 65%) 80%);
+    background-repeat:no-repeat,no-repeat;
+    background-position:center,center;
+  
+    background-size:4.0em,contain;
+    
+    
+}
+
+#rulesButton
+{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    align-self:flex-end;
+    border:solid hsl(217, 16%, 45%);
+    height:5%;
+    width:8%;
+    border-radius:15px;
+    font-size:0.8em;
+}
+
+#rulesBackground
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:5;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+#rules
+{
+    width:25%;
+    height:55%;
+    background-color:white;
+    background-image:url("../assets/images/image-rules.svg");
+    background-repeat:no-repeat;
+    background-position:center 70% ;
+    display:flex;
+    justify-content:space-between;
+    padding:2%;
+    border-radius:12px;
+    color:Black;
+    
+
+}
+
+#rules h2
+{
+    font-size:1.7em;
+    font-weight:bold;
+    color:hsl(229, 25%, 31%);
+
+}
+
+#closeButton
+{
+    color:lightgrey;
+    font-size:1.2em;
+    font-weight:bold;
+}
+
+#gameResult
+{
+    width:100%;
+    height:30vw;
+    display:none;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+   
+
+}
+
+.pickCard
+{
+    
+    height:100%;
+    width:20%;
+    display:flex;
+    flex-direction:column;
+    padding-bottom:3%;
+    
+    align-items:center;
+    
+}
+
+.pickCard h2
+{
+    margin-top:20%;
+    margin-bottom:10%;
+    font-size:1.1em;
+    font-weight:bold;
+
+}
+
+.pickCard .actionIcon
+{
+    width:50%;
+    padding-top:50%;
+}
+
+.pickCard .scissors,.pickCard .rock,.pickCard .paper
+{
+    background-color:unset;
+    width:80%;
+    padding-top:80%;
+
+}
+
+.actionIconContainer
+{
+    flex:1;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+#result
+{
+
+    
+    margin-left:3%;
+    margin-right:3%;
+
+    width:13%;
+    height:25%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+}
+
+#result h2
+{
+    font-weight:bold;
+    font-size:2.2em;
+   
+    letter-spacing: 1px;
+    text-align:center;;
+    height:50%;
+}
+
+#playAgain
+{
+    width:100%;
+    height:40%;
+    background-color:white;
+    color:red;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:15px;
+    font-weight:bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
